@@ -125,3 +125,65 @@ footer {
     margin-top: 1rem;
     text-shadow: 0 0 10px #ee82ee, 0 0 20px #ee82ee, 0 0 30px #ee82ee, 0 0 40px #ee82ee;
 }
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Increase gap for vertical stacking */
+        display: none; /* Hidden by default */
+        background-color: black; /* Add a background for the dropdown */
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        width: 50%;
+        padding: 1em 0;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    /* Hamburger menu button */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-left: 1rem;
+        padding: 1rem;
+        border: none;
+        color: white;
+        font-size: 1.5em;
+        background-color: #000;
+    }
+
+    /* Show the menu when hamburger is clicked */
+    .hamburger.active + ul {
+        display: block;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1em;
+        width: 100%; /* Make the links full width in mobile view */
+    }
+}
+
+/* Optional: Hamburger icon styling */
+.hamburger {
+    display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+}
