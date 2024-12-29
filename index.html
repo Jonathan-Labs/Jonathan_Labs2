@@ -13,7 +13,7 @@
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">About Me</a></li>
                     <li><a href="education.html">Education</a></li>
                     <li><a href="extra-curricular.html">Extra Curricular</a></li>
                     <li><a href="skills.html">Skills/Talents</a></li>
@@ -47,6 +47,48 @@
             hamburger.classList.toggle('active');
         }
     </script>
+
+<script>
+    // Array of texts to display
+    const textArray = [
+        "Welcome to my website!",
+        "Welcome to my website!.",
+        "Welcome to my website!..",
+        "Welcome to my website!...",
+        "Portfolio for Web Sytems and Technologies",
+        "Portfolio for Web Sytems and Technologies.",
+        "Portfolio for Web Sytems and Technologies..",
+        "Portfolio for Web Sytems and Technologies...",
+        "Enjoy your stay!",
+        "Enjoy your stay!.",
+        "Enjoy your stay!..",
+        "Enjoy your stay!...",
+        "My favorite color is Purple and Cyan! If it's not already obvios",
+        "My favorite color is Purple and Cyan! If it's not already obvios.",
+        "My favorite color is Purple and Cyan! If it's not already obvios..",
+        "My favorite color is Purple and Cyan! If it's not already obvios...",
+        "A little kindness will go a long way",
+        "A little kindness will go a long way.",
+        "A little kindness will go a long way..",
+        "A little kindness will go a long way...",
+    ];
+
+    let currentIndex = 0; // Keep track of the current index in the array
+
+    const textElement = document.getElementById('thi_is'); // Get the text element
+
+    // Function to change the text
+    function changeText() {
+        textElement.textContent = textArray[currentIndex];
+        currentIndex = (currentIndex + 1) % textArray.length; // Loop back to the first text after the last
+    }
+
+    // Call the function once to set the initial text
+    changeText();
+
+    // Change the text every second (1000 milliseconds)
+    setInterval(changeText, 1000);
+</script>
 
 </body>
 </html>
